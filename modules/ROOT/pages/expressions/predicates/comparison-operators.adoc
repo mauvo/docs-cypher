@@ -197,6 +197,7 @@ RETURN n.name AS name
 1+d|Rows: 2
 |===
 
+[[is-not-null-operator]]
 .`IS NOT NULL` operator
 // tag::expressions_predicates_comparison_operators_is_not_null[]
 [source, cypher]
@@ -219,6 +220,9 @@ RETURN n.name AS name, n.email AS email
 
 2+d|Rows: 4
 |===
+
+The `IS NOT NULL` predicate provides the same semantics as the optional GQL property existence predicate (GQL feature G115).
+For details, see xref:appendix/gql-conformance/supported-optional.adoc#g115[GQL conformance -> Supported optional GQL features (G115)].
 
 =====
 

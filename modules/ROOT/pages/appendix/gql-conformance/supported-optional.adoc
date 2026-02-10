@@ -89,6 +89,14 @@ These codes order the features in the table below.
 | xref:patterns/reference.adoc#label-expressions[Label expressions]
 |
 
+| [[g115]]G115
+| Property existence predicate
+| xref:expressions/predicates/comparison-operators.adoc#is-not-null-operator[`IS NOT NULL`], xref:values-and-types/working-with-null.adoc#is-null-is-not-null[Working with null]
+| GQL allows testing whether a value (typically a property) exists and is not null.
+In Cypher, the same semantics are expressed with the xref:expressions/predicates/comparison-operators.adoc[`IS NOT NULL`] predicate: for nodes and relationships, a missing property evaluates to `null`, so `n.prop IS NOT NULL` is true when the property is present and not null.
+This can be used in xref:clauses/where.adoc[`WHERE`] clauses, xref:clauses/filter.adoc[`FILTER`] clauses, and xref:constraints/managing-constraints.adoc#create-property-existence-constraints[property existence constraints] (`REQUIRE ... IS NOT NULL`).
+For index use with existence checks, see xref:indexes/search-performance-indexes/using-indexes.adoc#property-existence-check[Using indexes -> Property existence checks].
+
 | GA06
 | Value type predicates
 | xref:expressions/predicates/type-predicate-expressions.adoc[Type predicate expressions]
